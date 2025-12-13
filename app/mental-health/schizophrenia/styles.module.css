@@ -1,0 +1,58 @@
+.page {
+  padding: 2.25rem;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  min-height: 60vh;
+}
+.header {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+.lead {
+  color: #444;
+  margin-top: 0.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card {
+  background: linear-gradient(135deg, #ffffffcc, #f2f8ff);
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 6px 18px rgba(20, 40, 80, 0.06);
+  overflow: hidden;
+}
+.toggle {
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.caret {
+  color: #0b6cff;
+  display: inline-block;
+  width: 1.2rem;
+}
+.content {
+  padding: 0 1rem 1rem 2.2rem;
+  color: #333;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1rem;
+  }
+  .toggle {
+    padding: 0.7rem 0.8rem;
+  }
+}
