@@ -2,12 +2,16 @@
 
 import { useState } from "react";
 
-export default function CounterClient({ initial }) {
-  const [count, setCount] = useState(initial);
+type CounterClientProps = {
+  initial: number;
+};
+
+export default function CounterClient({ initial }: CounterClientProps) {
+  const [count, setCount] = useState<number>(initial);
 
   return (
     <div style={{ marginTop: 20 }}>
-      <h2>Client zzzCounter</h2>
+      <h2>Client Counter</h2>
       <p>Value: {count}</p>
 
       <button
