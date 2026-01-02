@@ -1,19 +1,11 @@
-import Link from 'next/link'
+import MentalHealthClient from "./MentalHealthClient";
 
 export const metadata = {
-  title: 'Mental Health',
-}
+  title: "Mental Health Research | CPISolution",
+  description:
+    "Advanced mental health research including schizophrenia, suicide prevention, altered states of consciousness, AI psychology tools, and future brain–mind interfaces.",
+};
 
-export default function MentalHealthIndex() {
-  return (
-    <main style={{padding: '2rem'}}>
-      <h1>Mental Health</h1>
-      <p>This section contains resources and articles about mental health topics.</p>
-      <ul>
-        <li>
-          <Link href="/mental-health/schizophrenia">Schizophrenia — overview, symptoms, and treatments</Link>
-        </li>
-      </ul>
-    </main>
-  )
+export default function MentalHealthPage() {
+  return <MentalHealthClient />;
 }

@@ -46,14 +46,10 @@ export default function Home() {
           {[
             { title: "AI Research", link: "/ai" },
             { title: "Genetics", link: "/genetics" },
-            { title: "Stem Cells", link: "/health" },
             { title: "Cell Reprogramming", link: "/cell" },
             { title: "Anti-Aging", link: "/antiaging" },
             { title: "Robotics", link: "/robotics" },     // 🌟 Added here
             { title: "Mental Health", link: "/mentalhealth" },
-            { title: "Cancer Research", link: "/cancer" },
-            { title: "Science News", link: "/Sciencenews" },
-            { title: "Daily Activity", link: "/Da" },
             { title: "Contact Us", link: "/Contactus" }
           ].map((item, idx) => (
             <motion.a
