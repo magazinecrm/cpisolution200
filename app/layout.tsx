@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ParticleBackground from "./components/ParticleBackground";
+import { Analytics } from "@vercel/analytics/next"; // 👈 ADD THIS
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +29,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Background with example settings: fewer particles, more stars, bright stars */}
-        <ParticleBackground particleCount={120} starCount={14} starBrightness={1.2} />
+        <ParticleBackground
+          particleCount={120}
+          starCount={14}
+          starBrightness={1.2}
+        />
         <div className="relative z-10">{children}</div>
+
+        <Analytics /> {/* 👈 ADD THIS */}
       </body>
     </html>
   );
