@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParticleBackground from "./components/ParticleBackground";
-import { Analytics } from "@vercel/analytics/react"; // ✅ correct
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "CPISolution — Research Hub",
@@ -26,17 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ParticleBackground
-          particleCount={120}
-          starCount={14}
-          starBrightness={1.2}
-        />
-        <div className="relative z-10">{children}</div>
-
-        <Analytics /> {/* 👈 ADD THIS */}
+      <body>
+        {children}
+        <Analytics />
       </body>
     </html>
   );
