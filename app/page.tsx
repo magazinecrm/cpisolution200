@@ -49,7 +49,7 @@ export default function Home() {
             { title: "Cell Reprogramming", link: "/cell" },
             { title: "Anti-Aging", link: "/antiaging" },
             { title: "Robotics", link: "/robotics" },     // 🌟 Added here
-            { title: "Mental Health", link: "/mentalhealth" },
+            { title: "Mental Health", link: "/mental-health" },
             { title: "Contact Us", link: "/Contactus" }
           ].map((item, idx) => (
             <motion.a
