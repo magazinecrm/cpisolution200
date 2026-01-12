@@ -1,4 +1,6 @@
 "use client";
+
+import Link from "next/link";
 import ParticleBackground from "./components/ParticleBackground";
 import { motion } from "framer-motion";
 
@@ -52,17 +54,17 @@ export default function Home() {
             { title: "Mental Health", link: "/mental-health" },
             { title: "Contact Us", link: "/Contactus" }
           ].map((item, idx) => (
-            <motion.a
-              key={idx}
-              href={item.link}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
-                         text-white font-semibold shadow-lg hover:bg-white/20 
-                         transition-all duration-300"
-            >
-              {item.title}
-            </motion.a>
+          <Link key={idx} href={item.link} prefetch={false}>
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.97 }}
+    className="p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
+               text-white font-semibold shadow-lg hover:bg-white/20 
+               transition-all duration-300 cursor-pointer"
+  >
+    {item.title}
+  </motion.div>
+</Link>
           ))}
         </motion.div>
 
