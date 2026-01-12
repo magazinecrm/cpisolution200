@@ -7,16 +7,13 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
-
       {/* Particle Background */}
       <ParticleBackground />
 
-      {/* Soft overlay for clarity */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 pointer-events-none"></div>
+      {/* Soft overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 pointer-events-none" />
 
-      {/* Main Section */}
       <main className="relative z-10 max-w-5xl w-full px-6 py-24 flex flex-col items-center text-center">
-
         {/* HERO TITLE */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -50,21 +47,21 @@ export default function Home() {
             { title: "Genetics", link: "/genetics" },
             { title: "Cell Reprogramming", link: "/cell" },
             { title: "Anti-Aging", link: "/antiaging" },
-            { title: "Robotics", link: "/robotics" },     // 🌟 Added here
+            { title: "Robotics", link: "/robotics" },
             { title: "Mental Health", link: "/mental-health" },
-            { title: "Contact Us", link: "/Contactus" }
+            { title: "Contact Us", link: "/Contactus" },
           ].map((item, idx) => (
-          <Link key={idx} href={item.link} prefetch={false}>
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.97 }}
-    className="p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
-               text-white font-semibold shadow-lg hover:bg-white/20 
-               transition-all duration-300 cursor-pointer"
-  >
-    {item.title}
-  </motion.div>
-</Link>
+            <Link key={idx} href={item.link}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
+                           text-white font-semibold shadow-lg hover:bg-white/20 
+                           transition-all duration-300 cursor-pointer"
+              >
+                {item.title}
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
 
