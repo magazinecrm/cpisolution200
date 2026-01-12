@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
-  const url = req.nextUrl;
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
 
-  if (url.pathname === "/mentalhealth") {
-    url.pathname = "/mental-health";
-    return NextResponse.redirect(url);
+  // Redirect ONLY the old path
+  if (pathname === "/mentalhealth") {
+    return NextResponse.redirect(
+      new URL("/mental-health", request.url),
+      301
+    );
   }
 
   return NextResponse.next();
