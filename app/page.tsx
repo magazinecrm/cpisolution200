@@ -33,7 +33,7 @@ export default function Home() {
           className="mt-6 text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl"
         >
           Exploring breakthroughs in Artificial Intelligence, Genetics, Stem Cells,
-          Cell Reprogramming, Anti-Aging, Mental Health, Cancer Science, and Emerging Technologies.
+          Cell Reprogramming, Anti-Aging, Mental Health, and Emerging Technologies.
         </motion.p>
 
         {/* RESEARCH GRID */}
